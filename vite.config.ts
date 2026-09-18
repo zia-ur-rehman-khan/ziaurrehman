@@ -11,5 +11,14 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Prerender "/" to static HTML — the portfolio is fully static (no backend),
+    // which is what makes GitHub Pages hosting possible.
+    pages: [{ path: "/" }],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
+  },
+  vite: {
+    // GitHub Pages project sites are served under /<repo-name>/; the deploy
+    // workflow sets PAGES_BASE accordingly. Lovable hosting keeps "/".
+    base: process.env["PAGES_BASE"] || "/",
   },
 });
