@@ -1,4 +1,4 @@
 # Roadmap
 
-- [ ] Publish portfolio with URL slug `ziaurrehman` (user's chosen link name)
-- [ ] GitHub: user asked whether we can upload the project to GitHub — answer yes and offer to connect (Plus menu → GitHub → Connect project, or connector setup)
+- [ ] Publish portfolio with URL slug `ziaurrehman` — user's chosen link name (publish interrupted twice, pending user decision)
+- [ ] GitHub Pages hosting: user wants to host the portfolio on GitHub Pages. Portfolio is static (no backend), so feasible. Options: Lovable publish only / GitHub Pages only / both.
