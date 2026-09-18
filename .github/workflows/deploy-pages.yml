@@ -25,10 +25,13 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Build static site
         run: bun run build
         env:
-          # Portfolio lives at https://<user>.github.io/<repo>/ — tell Vite the base path.
+          # Always derive the current repository name, including after a rename.
           PAGES_BASE: /${{ github.event.repository.name }}/
 
       - name: Upload Pages artifact
