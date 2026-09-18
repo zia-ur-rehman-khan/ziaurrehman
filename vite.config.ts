@@ -19,6 +19,6 @@ export default defineConfig({
   vite: {
     // GitHub Pages project sites are served under /<repo-name>/; the deploy
     // workflow sets PAGES_BASE accordingly. Lovable hosting keeps "/".
-    base: process.env.PAGES_BASE || "/",
+    base: process.env["PAGES_BASE"] || "/",
   },
 });
